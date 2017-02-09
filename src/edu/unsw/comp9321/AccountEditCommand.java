@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tomcat.util.log.SystemLogHandler;
+
 import edu.unsw.comp9321.jdbc.JDBCUserDAOImpl;
 import edu.unsw.comp9321.jdbc.UserDAO;
 import edu.unsw.comp9321.jdbc.UserDTO;
@@ -34,6 +36,7 @@ public class AccountEditCommand implements Command {
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String nextPage = "/AccountPage.jsp";
+		System.out.println("111");
 		UserDTO user = (UserDTO) request.getSession().getAttribute("user");
 		String password = request.getParameter("password");
 		if (!password.equals(""))
