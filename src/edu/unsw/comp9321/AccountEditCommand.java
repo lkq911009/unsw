@@ -38,6 +38,7 @@ public class AccountEditCommand implements Command {
 		String nextPage = "/AccountPage.jsp";
 		System.out.println("111");
 		String lkq="lkq shi da shuaige";
+		String s="";
 		UserDTO user = (UserDTO) request.getSession().getAttribute("user");
 		String password = request.getParameter("password");
 		if (!password.equals(""))
