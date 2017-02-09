@@ -37,6 +37,7 @@ public class AccountEditCommand implements Command {
 		// TODO Auto-generated method stub
 		String nextPage = "/AccountPage.jsp";
 		System.out.println("111");
+		String lkq="lkq shi da shuaige";
 		UserDTO user = (UserDTO) request.getSession().getAttribute("user");
 		String password = request.getParameter("password");
 		if (!password.equals(""))
